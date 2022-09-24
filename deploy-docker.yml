@@ -7,6 +7,7 @@
       command: "{{ item }}"
       name: "install docker"
       with_items: 
+         - apt update
          - apt-get install -y ca-certificates curl gnupg lsb-release
          - mkdir -p /etc/apt/keyrings
          - curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
